@@ -4,7 +4,7 @@ var app = express.createServer(express.logger());
 
 INPUT = fs.readFileSync('index.html')
 INPUTB = new Buffer(INPUT)
-INPUTS = INPUTB.toString()
+INPUTS = INPUTB.toString('utf-8',0,23)
 var MESSAGE = 'gw2'
 
 app.get('/', function(request, response) {
