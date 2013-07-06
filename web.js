@@ -3,13 +3,12 @@ var fs = require('fs')
 
 var app = express.createServer(express.logger());
 
-INPUT = fs.readFileSync('index.html')
-INPUTB = new Buffer(INPUT)
-INPUTS = INPUTB.toString('utf-8',0,23)
-var MESSAGE = 'gw2'
+INPUT_BUF = fs.readFileSync('index.html')
+// INPUT_B = new Buffer(INPUT)
+INPUT_STR = INPUT_BUF.toString('utf-8',0,23)
 
 app.get('/', function(request, response) {
-  response.send(INPUTS);
+  response.send(INPUT_STR);
 });
 
 var port = process.env.PORT || 5000;
