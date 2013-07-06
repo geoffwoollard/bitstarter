@@ -5,9 +5,10 @@ var app = express.createServer(express.logger());
 // INPUT = fs.readFileSync('index.html')
 // INPUT_B = new Buffer(INPUT)
 // INPUT_S = INPUT_B.toString()
+var MESSAGE = 'gw2'
 
 app.get('/', function(request, response) {
-  response.send('gw');
+  response.send(MESSAGE);
 });
 
 var port = process.env.PORT || 5000;
