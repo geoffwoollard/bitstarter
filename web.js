@@ -2,13 +2,13 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-// INPUT = fs.readFileSync('index.html')
-// INPUT_B = new Buffer(INPUT)
-// INPUT_S = INPUT_B.toString()
+INPUT = fs.readFileSync('index.html')
+INPUTB = new Buffer(INPUT)
+INPUTS = INPUTB.toString()
 var MESSAGE = 'gw2'
 
 app.get('/', function(request, response) {
-  response.send(MESSAGE);
+  response.send(INPUTS);
 });
 
 var port = process.env.PORT || 5000;
